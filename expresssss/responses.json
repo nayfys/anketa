@@ -1,0 +1,18 @@
+[
+  {
+    "surveyId": 1,
+    "answers": {
+      "q1": "Průměrně",
+      "q2": "iu"
+    },
+    "timestamp": "2026-05-14T18:37:18.941Z"
+  },
+  {
+    "surveyId": 1,
+    "answers": {
+      "q1": "Dobře",
+      "q2": "df"
+    },
+    "timestamp": "2026-05-14T19:13:50.383Z"
+  }
+]

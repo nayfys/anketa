@@ -1,0 +1,19 @@
+<%- include('partials/header', { title: 'Webové ankety' }) %>
+
+<div class="survey-list">
+    <% if (surveys.length === 0) { %>
+        <div class="card">
+            <p>Žádné ankety nejsou dostupné.</p>
+        </div>
+    <% } %>
+
+    <% surveys.forEach(survey => { %>
+        <div class="card">
+            <h2><%= survey.title %></h2>
+            <p><%= survey.description %></p>
+            <a href="/survey/<%= survey.id %>">Vyplnit anketu</a>
+        </div>
+    <% }) %>
+</div>
+
+<%- include('partials/footer') %>

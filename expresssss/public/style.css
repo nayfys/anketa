@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #E8EAFF 0%, #F0E6FF 100%);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card,
+.question-box,
+.result-box {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button,
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #5B7FFF 0%, #9966FF 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    margin: 15px 15px 15px 0;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+@media(max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+}

@@ -1,0 +1,28 @@
+<%- include('partials/header', { title: survey.title }) %>
+
+<div class="card">
+    <p><%= survey.description %></p>
+
+    <form method="post" action="/survey/<%= survey.id %>">
+        <% survey.questions.forEach(question => { %>
+            <div class="question-box">
+                <p class="question-text"><strong><%= question.text %></strong></p>
+
+                <% if (question.type === 'closed') { %>
+                    <% question.options.forEach(option => { %>
+                        <label class="option-label">
+                            <input type="radio" name="<%= question.id %>" value="<%= option %>" required>
+                            <span><%= option %></span>
+                        </label>
+                    <% }) %>
+                <% } else { %>
+                    <textarea name="<%= question.id %>" placeholder="Napište svůj názor..." required></textarea>
+                <% } %>
+            </div>
+        <% }) %>
+
+        <button type="submit">Odeslat odpovědi</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

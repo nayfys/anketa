@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Studentská anketa",
+    "description": "Dotazník spokojenosti studentů.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Jak hodnotíte výuku?",
+        "type": "closed",
+        "options": ["Výborně", "Dobře", "Průměrně", "Špatně"]
+      },
+      {
+        "id": "q2",
+        "text": "Jaký předmět vás nejvíce baví?",
+        "type": "open"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Ohodnocení dnešního oběda",
+    "description": "Jak jste spokojeni s dnešním obědem? Dejte nám vědět, co se vám líbilo a co bychom měli změnit.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Jak hodnotíte dnešní oběd?",
+        "type": "closed",
+        "options": ["Vynikající", "Velmi dobrý", "Dobrý", "Průměrný", "Špatný"]
+      },
+      {
+        "id": "q2",
+        "text": "Co se vám líbilo?",
+        "type": "open"
+      },
+      {
+        "id": "q3",
+        "text": "Co bychom měli změnit, přidat nebo odebrat?",
+        "type": "open"
+      }
+    ]
+  }
+]

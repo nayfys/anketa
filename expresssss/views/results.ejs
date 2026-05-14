@@ -1,0 +1,36 @@
+<%- include('partials/header', { title: 'Výsledky ankety' }) %>
+
+<div class="card">
+    <h2><%= survey.title %></h2>
+    <p>Počet odpovědí: <%= totalResponses %></p>
+
+    <% if (totalResponses === 0) { %>
+        <p>Nikdo zatím nevyplnil tuto anketu.</p>
+    <% } else { %>
+        <% survey.questions.forEach(question => { %>
+            <div class="result-box">
+                <p class="question-text"><strong><%= question.text %></strong></p>
+
+                <% if (question.type === 'closed') { %>
+                    <ul class="result-list">
+                        <% Object.entries(stats[question.id]).forEach(([option, count]) => { %>
+                            <li><%= option %>: <strong><%= count %></strong></li>
+                        <% }) %>
+                    </ul>
+                <% } else { %>
+                    <% if (stats[question.id].length === 0) { %>
+                        <p>Zatím žádné odpovědi.</p>
+                    <% } else { %>
+                        <ul class="result-list">
+                            <% stats[question.id].forEach(answer => { %>
+                                <li><%= answer %></li>
+                            <% }) %>
+                        </ul>
+                    <% } %>
+                <% } %>
+            </div>
+        <% }) %>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>
